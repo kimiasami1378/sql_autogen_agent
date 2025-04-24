@@ -1,0 +1,10 @@
+autogen-agentchat>=0.4.0
+autogen-ext[anthropic,web-surfer]>=0.4.0
+python-dotenv>=1.0.0
+pandas>=1.5.0
+pyyaml>=6.0.0
+tqdm>=4.64.0
+requests>=2.28.0
+sqlparse>=0.4.2
+matplotlib>=3.7.0
+jupyter>=1.0.0
