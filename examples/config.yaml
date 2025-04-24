@@ -1,1 +1,40 @@
+# BirdSQLOrchestrator Configuration
 
+# LLM Configuration
+llm:
+  provider: anthropic  # Options: openai, anthropic
+  model: claude-3-7-sonnet-20250219  # Model name
+  temperature: 0.0  # Lower values = more deterministic outputs
+  max_tokens: 1500  # Maximum number of tokens to generate
+  top_p: 1.0        # Top-p sampling
+  timeout: 120      # Request timeout in seconds
+
+# Database Configuration
+database:
+  path: ./data/databases  # Path to directory containing SQLite databases
+
+# Global Agent Configuration
+agents:
+  max_repair_attempts: 3           # Maximum SQL repair attempts
+  max_consecutive_replies: 10      # Maximum conversation turns
+
+# Agent-specific Configuration Overrides
+agent_overrides:
+  generator:
+    # Specific configuration for SQLGeneratorAgent
+    system_message_template: |
+      You are an expert SQL Generator. Your job is to:
+      1. Convert natural language questions to correct SQL queries
+      2. Ensure proper syntax and schema alignment
+      3. Use appropriate JOINs, WHERE clauses, and functions
+      
+  validator:
+    # Specific configuration for ResultValidatorAgent
+    validation_strictness: high  # Options: low, medium, high
+    
+  repair:
+    # Specific configuration for AutoRepairAgent
+    max_repair_attempts: 4  # Override the global setting
+    
+# General Configuration
+debug_mode: false  # When true, uses direct agent calls instead of group chat 
