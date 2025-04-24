@@ -1,0 +1,25 @@
+{
+  "question": "Using database world_1, What is the population of China?",
+  "sql": "SELECT population FROM country WHERE name = 'China'",
+  "execution_results": {
+    "success": true,
+    "results": [
+      {
+        "population": 1400000000
+      },
+      {
+        "population": 1400000000
+      },
+      {
+        "population": 1400000000
+      },
+      {
+        "population": 1400000000
+      }
+    ],
+    "row_count": 4,
+    "error": null
+  },
+  "validation_status": "PASS",
+  "error_message": null
+}

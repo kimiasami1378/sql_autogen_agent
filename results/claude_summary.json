@@ -1,0 +1,7 @@
+{
+  "total_questions": 500,
+  "successful_executions": 416,
+  "execution_accuracy": 0.832,
+  "total_time_seconds": 321444.0636603832,
+  "avg_time_per_question": 642.8881273207664
+}
